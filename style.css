@@ -19,7 +19,7 @@ body {
     border: 3px solid #0047B6;
     border-radius: 20px;
     margin: 20px auto 10px auto;
-    max-width: 90vh;       
+    max-width: 600px;       
 }
 
 .inputs_container {
