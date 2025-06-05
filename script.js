@@ -14,18 +14,21 @@ function calcular(){
         alert("Digite apenas dois valores realizar o cálculo!")
     //Calculo da corrente
     }else if(correnteNan && !tensaoNan && !resistenciaNan){
+        document.getElementById("resultado").innerHTML = "Resultado: "
         corrente = tensao / resistencia
         definirValores(resistencia, tensao, corrente)
         document.getElementById("resultado").innerHTML += `Corrente = ${corrente.toFixed(3)} A (Amperes)`;
 
     //Calculo da tensao
     }else if(tensaoNan && !resistenciaNan && !correnteNan){
+        document.getElementById("resultado").innerHTML = "Resultado: "
         tensao = resistencia * corrente
         definirValores(resistencia, tensao, corrente)
         document.getElementById("resultado").innerHTML += `Tensão = ${tensao.toFixed(3)} V (volts)`;
         
     //Calculo da resistencia
     }else if(resistenciaNan && !tensaoNan && !correnteNan){
+        document.getElementById("resultado").innerHTML = "Resultado: "
         resistencia = tensao / corrente
         definirValores(resistencia, tensao, corrente)
         document.getElementById("resultado").innerHTML += `Resistência = ${resistencia.toFixed(3)} Ω (Ohms)`;

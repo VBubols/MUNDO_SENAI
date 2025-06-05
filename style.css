@@ -58,6 +58,20 @@ body {
     width: auto;
 }
 
+#qrcode {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto; /* centraliza horizontalmente no footer */
+}
+
+/* Esconde o QR code em telas pequenas */
+@media (max-width: 768px) {
+    #qrcode {
+        display: none;
+    }
+}
 footer {
     font-family: 'Roboto',monospace;
     font-size: 16px;
