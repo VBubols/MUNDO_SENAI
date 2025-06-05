@@ -16,19 +16,19 @@ function calcular(){
     }else if(correnteNan && !tensaoNan && !resistenciaNan){
         corrente = tensao / resistencia
         definirValores(resistencia, tensao, corrente)
-        document.getElementById("resultado").innerHTML += `Corrente = ${corrente} A (Amperes)`;
+        document.getElementById("resultado").innerHTML += `Corrente = ${corrente.toFixed(3)} A (Amperes)`;
 
     //Calculo da tensao
     }else if(tensaoNan && !resistenciaNan && !correnteNan){
         tensao = resistencia * corrente
         definirValores(resistencia, tensao, corrente)
-        document.getElementById("resultado").innerHTML += `Tensão = ${tensao} V (volts)`;
+        document.getElementById("resultado").innerHTML += `Tensão = ${tensao.toFixed(3)} V (volts)`;
         
     //Calculo da resistencia
     }else if(resistenciaNan && !tensaoNan && !correnteNan){
         resistencia = tensao / corrente
         definirValores(resistencia, tensao, corrente)
-        document.getElementById("resultado").innerHTML += `Resistência = ${resistencia} Ω (Ohms)`;
+        document.getElementById("resultado").innerHTML += `Resistência = ${resistencia.toFixed(3)} Ω (Ohms)`;
 
     }else{
         alert("ERRO! Digite ao menos dois valores para realizar o cálculo")
@@ -43,7 +43,7 @@ function redefinir(){
 }
 
 function definirValores(resistencia, tensao, corrente){
-    document.getElementById("resistencia").value = resistencia
-    document.getElementById("tensao").value = tensao
-    document.getElementById("corrente").value = corrente
+    document.getElementById("resistencia").value = resistencia.toFixed(3)
+    document.getElementById("tensao").value = tensao.toFixed(3)
+    document.getElementById("corrente").value = corrente.toFixed(3 )
 }
