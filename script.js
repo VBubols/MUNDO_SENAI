@@ -17,21 +17,21 @@ function calcular(){
         document.getElementById("resultado").innerHTML = "Resultado: "
         corrente = tensao / resistencia
         definirValores(resistencia, tensao, corrente)
-        document.getElementById("resultado").innerHTML += `Corrente = ${corrente.toFixed(0)} A (Amperes)`;
+        document.getElementById("resultado").innerHTML += `Corrente = ${corrente.toFixed(3)} A (Amperes)`;
 
     //Calculo da tensao
     }else if(tensaoNan && !resistenciaNan && !correnteNan){
         document.getElementById("resultado").innerHTML = "Resultado: "
         tensao = resistencia * corrente
         definirValores(resistencia, tensao, corrente)
-        document.getElementById("resultado").innerHTML += `Tensão = ${tensao.toFixed(0)} V (volts)`;
+        document.getElementById("resultado").innerHTML += `Tensão = ${tensao.toFixed(3)} V (volts)`;
         
     //Calculo da resistencia
     }else if(resistenciaNan && !tensaoNan && !correnteNan){
         document.getElementById("resultado").innerHTML = "Resultado: "
         resistencia = tensao / corrente
         definirValores(resistencia, tensao, corrente)
-        document.getElementById("resultado").innerHTML += `Resistência = ${resistencia.toFixed(0)} Ω (Ohms)`;
+        document.getElementById("resultado").innerHTML += `Resistência = ${resistencia.toFixed(3)} Ω (Ohms)`;
 
     }else{
         alert("ERRO! Digite ao menos dois valores para realizar o cálculo")
