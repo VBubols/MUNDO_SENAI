@@ -5,6 +5,7 @@ function calcular(){
     corrente = parseFloat(document.getElementById("corrente").value)  
     resistencia = parseFloat(document.getElementById("resistencia").value)
 
+    
     const tensaoNan = isNaN(tensao);
     const correnteNan = isNaN(corrente);
     const resistenciaNan = isNaN(resistencia);
